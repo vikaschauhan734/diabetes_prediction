@@ -25,8 +25,13 @@ The Jupyter Notebook file `notebook.ipynb` contains the code and analysis for th
 3. Removing duplicated values from the dataset.
 4. Data visualization:
    - Countplot of the count of individuals by smoking history.
+   - Countplot of the count of individuals by smoking history and diabetes status.
+   - Countplot of the count of individuals by gender.
+   - Countplot of the count of individuals by gender and diabetes status.
    - Histogram of age distribution.
    - Box plot of age distribution by diabetes.
+   - Countplot of the count of individuals by hypertension and diabetes status.
+   - Countplot of the count of individuals by heart disease and diabetes status.
    - Box plot of BMI distribution by diabetes.
    - Box plot of HbA1c level distribution by diabetes.
    - Box plot of blood glucose level distribution by diabetes.
@@ -39,10 +44,10 @@ The Jupyter Notebook file `notebook.ipynb` contains the code and analysis for th
 10. Defining a dictionary of algorithms in the `algos` variable.
 11. Training the algorithms with different hyperparameters and saving the model, best score, and best parameters in the `scores` variable.
 12. Converting the `scores` into a dataframe.
-13. Splitting the data of `X` and `y` into training and testing datasets using `train_test_split`.
-14. Training a Random Forest Classifier with `n_estimators=5` and `criterion='log_loss'`.
+13. Splitting the data of `X` and `y` into training, testing and validating datasets using `train_test_split`.
+14. Training a Random Forest Classifier with `n_estimators=100` and `criterion='entropy'`.
 15. Calculating the accuracy score.
-16. Predicting the values for the test data `X_test` and saving the predictions in `y_pred`.
+16. Predicting the values for the test data `X_valid` and saving the predictions in `y_pred`.
 17. Creating a confusion matrix and heatmap of the confusion matrix.
 18. Creating a classification report.
 19. Applying PCA (Principal Component Analysis) on `X` for dimensionality reduction.
