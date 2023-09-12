@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Diabetes Diagnosis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f5f5f5;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #ffffff;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+        }
+        h1 {
+            color: #333;
+        }
+        form {
+            text-align: left;
+        }
+        .form-group {
+            margin-bottom: 20px;
+        }
+        label {
+            display: block;
+            font-weight: bold;
+        }
+        select, input[type="number"], input[type="text"] {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        select {
+            height: 36px;
+        }
+        .submit-button {
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Diabetes Diagnosis</h1>
+        <form action="/submit" method="POST">
+            <div class="form-group">
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" required>
+            </div>
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select id="gender" name="gender" required>
+                    <option value="male">Male</option>
+                    <option value="female">Female</option>
+                    <option value="other">Other</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="hypertension">Hypertension:</label>
+                <select id="hypertension" name="hypertension" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="heartDisease">Heart Disease:</label>
+                <select id="heartDisease" name="heartDisease" required>
+                    <option value="yes">Yes</option>
+                    <option value="no">No</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="bmi">BMI:</label>
+                <input type="text" id="bmi" name="bmi" required>
+            </div>
+            <div class="form-group">
+                <label for="hba1c">HbA1c Level:</label>
+                <input type="text" id="hba1c" name="hba1c" required>
+            </div>
+            <div class="form-group">
+                <label for="glucoseLevel">Blood Glucose Level:</label>
+                <input type="text" id="glucoseLevel" name="glucoseLevel" required>
+            </div>
+            <div class="form-group">
+                <label for="smokingHistory">Smoking History:</label>
+                <select id="smokingHistory" name="smokingHistory" required>
+                    <option value="current">Current</option>
+                    <option value="never">Never</option>
+                    <option value="ever">Ever</option>
+                    <option value="former">Former</option>
+                    <option value="notCurrent">Not Current</option>
+                    <option value="noInfo">No Info</option>
+                </select>
+            </div>
+            <input type="submit" class="submit-button" value="Submit">
+        </form>
+    </div>
+</body>
+</html>
