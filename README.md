@@ -44,7 +44,7 @@ The Jupyter Notebook file `notebook.ipynb` contains the code and analysis for th
 10. Defining a dictionary of algorithms in the `algos` variable.
 11. Training the algorithms with different hyperparameters and saving the model, best score, and best parameters in the `scores` variable.
 12. Converting the `scores` into a dataframe.
-13. Splitting the data of `X` and `y` into training, testing and validating datasets using `train_test_split`.
+13. Splitting the data of `X` and `y` into training, testing, and validating datasets using `train_test_split`.
 14. Training a Random Forest Classifier with `n_estimators=100` and `criterion='entropy'`.
 15. Calculating the accuracy score.
 16. Predicting the values for the test data `X_valid` and saving the predictions in `y_pred`.
@@ -55,3 +55,30 @@ The Jupyter Notebook file `notebook.ipynb` contains the code and analysis for th
 21. Creating a confusion matrix and classification report based on the reduced dimensions.
 
 Please refer to the `notebook.ipynb` file for detailed code implementation and further analysis of the diabetes prediction project.
+
+## Deployment Model
+
+To deploy the diabetes prediction model, we have trained a Random Forest Classifier on the dataset. The trained model has been saved as `model.pickle` for later use in the web application.
+
+You can find the code for training the model in the `deployment_model.ipynb` notebook.
+
+## Flask Web Application
+
+We have created a Flask web application for diabetes prediction using the trained Random Forest Classifier model. The application includes the following files:
+
+1. `app.py`: This is the main Flask application file that handles routing and prediction.
+2. `requirements.txt`: Contains the list of Python packages and dependencies required to run the Flask application.
+3. `templates` directory: Contains the HTML templates for the web pages:
+   - `index.html`: The main page for entering user data and getting predictions.
+   - `true.html`: Displayed when the prediction result is "Diabetic."
+   - `false.html`: Displayed when the prediction result is "Non-Diabetic."
+
+To run the Flask web application, make sure you have the required dependencies installed as mentioned in `requirements.txt`, and then execute `app.py`.
+
+Feel free to explore the web application and make predictions based on the trained model.
+
+## Webpage Glimpse:
+
+![Index](index.png)
+![False](false.png)
+![True](true.png)
